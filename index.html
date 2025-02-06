@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Recetas Comida</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="body-bg">
+    <div class="wrap-nav">
+        <nav class="navbar u-max-width">
+            <img src="images/tasty-recipes.svg" alt="" class="logo">
+            <div class="container-menu">
+                <ul class="menu">
+                    <li class="menu__item">Inicio</li>
+                    <li class="menu__item"><a href="favoritos.html">Mis favoritos</a></li>
+                    <li class="menu__item">Contacto</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <main class="main ">
+
+        <section class="titles">
+            <h1 class="title">Todos podemos ser un gran cocinero</h1>
+            <h2 class="subtitle">¡Encuentra una gran receta para hoy!</h2>
+        </section>
+        <section class="select-category">
+            <div class="select-category__info">Escoge una categoría y empecemos:</div>
+            <div class="select-category__wrap-select">
+                <select required name="category" id="category" class="select-category__select">
+                    <option value="" selected hidden>-- Selecciona --</option> <!-- disabled -->
+                </select>
+            </div>
+            <button id="btn-search" class="btn-primary">Buscar recetas</button>
+        </section>
+
+        <div class="wrap-categories">
+            <section class="main-categories u-max-width" id="main-categories">
+                <h3 class="section__title">Categorías destacadas</h3>
+                <p class="section__subtitle">Estas son las categorías mas populares entre nuestros usuarios:</p>
+
+                <div class="categories">
+                    <div class="category">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">pescados</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-1.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">veganas</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-2.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">pasta</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-3.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">desayunos</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-4.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">postres</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-5.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">entrantes</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-6.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="main-recipes u-max-width" id="main-recipes">
+            <h3 class="section__title">Ultima recetas añadidas</h3>
+            <p class="section__subtitle">Descubre nuestras últimas recetas añadidas</p>
+
+            <div class="recipes">
+                <div class="recipe">
+                    <div class="recipe__top">
+                        <img class="recipe__image" src="images/receta-1.jpg" alt="receta">
+                        <div class="recipe__info">
+                            <h4 class="recipe__title">Lamb Pilaf</h4>
+                            <div class="recipe__info-bottom">
+                                <button class="recipe__button">Ver receta</button>
+                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
+                                        alt="clock-icon">30 min</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                </div>
+                <div class="recipe">
+                    <div class="recipe__top">
+                        <img class="recipe__image" src="images/receta-2.jpg" alt="receta">
+                        <div class="recipe__info">
+                            <h4 class="recipe__title">Pate Chinois</h4>
+                            <div class="recipe__info-bottom">
+                                <button class="recipe__button">Ver receta</button>
+                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
+                                        alt="clock-icon">30 min</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                </div>
+                <div class="recipe">
+                    <div class="recipe__top">
+                        <img class="recipe__image" src="images/receta-3.jpg" alt="receta">
+                        <div class="recipe__info">
+                            <h4 class="recipe__title">Lamb Pilaf</h4>
+                            <div class="recipe__info-bottom">
+                                <button class="recipe__button">Ver receta</button>
+                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
+                                        alt="clock-icon">30 min</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                </div>
+                <div class="recipe">
+                    <div class="recipe__top">
+                        <img class="recipe__image" src="images/receta-4.jpg" alt="receta">
+                        <div class="recipe__info">
+                            <h4 class="recipe__title">Lamb Pilaf</h4>
+                            <div class="recipe__info-bottom">
+                                <button class="recipe__button">Ver receta</button>
+                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
+                                        alt="clock-icon">30 min</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="wrap-results u-hide" id="wrap-results">
+        <h3 class="results-heading" id="results-heading"></h3>
+        <div class="results u-max-width" id="results"></div>
+    </section>
+
+    
+    <section class="wrap-recipe-detail u-hide" id="wrap-recipe-detail">
+        <div id="recipe-detail" class="recipe-detail">
+        </div>
+    </section>
+
+
+
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
