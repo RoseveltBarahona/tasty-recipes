@@ -376,3 +376,7 @@ select:invalid { color: #777 }
         }
     }
 }
+
+@media (not(hover)) {
+    *{font-size: 5rem;}
+  }

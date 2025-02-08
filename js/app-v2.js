@@ -14,7 +14,9 @@ function iniciarApp() {
     const wrapFavorites = document.querySelector("#wrap-favorites")
     const btnSearch = document.querySelector("#btn-search")
 
+    let recipeTimes = [30, 40, 45]
     let readingFromStorage = false
+
 
     if (selectCategorias) {
         obtenerCategorias()
@@ -69,6 +71,7 @@ function iniciarApp() {
         }
 
         recetas.forEach(receta => {
+            let index = Math.floor(Math.random()*3);
             const { idMeal, strMeal, strMealThumb, type } = receta
             /* if (fromStorage) {idMeal = receta.id strMeal = receta.title strMealThumb = receta.img } */
 
@@ -79,28 +82,31 @@ function iniciarApp() {
             recipeTitle.classList.add("recipe-card__title")
             recipeTitle.innerHTML = `<span class="recipe-card__title-content">${strMeal ?? receta.title}</span>`
 
+            const recipeInfo = document.createElement("div")
+            recipeInfo.classList.add("recipe-card__info")
+            recipeInfo.dataset.time = recipeTimes[index]
+            recipeInfo.dataset.id = idMeal ?? receta.id
+
             const recipeImg = document.createElement("img")
             recipeImg.loading = "lazy"
             recipeImg.classList.add("recipe-card__img")
-            recipeImg.alt = `Imagen de ${strMeal ?? receta.title}`
+            recipeImg.alt = `Imagen de ${strMeal ?? receta.title}` 
             recipeImg.src = `${strMealThumb ?? receta.img}`
-
-            const recipeInfo = document.createElement("div")
-            recipeInfo.classList.add("recipe-card__info")
 
             const wrapBtnTime = document.createElement("div")
             wrapBtnTime.classList.add("recipe-card__wrap-btn-time")
+            wrapBtnTime.dataset.time = recipeTimes[index]
 
             const recetaBtn = document.createElement("button")
             recetaBtn.classList.add("recipe-card__button")
             recetaBtn.textContent = "Ver receta"
-            recetaBtn.addEventListener("click", () => {
-                seleccionarReceta(idMeal ?? receta.id)
-            })
+           /*  recetaBtn.addEventListener("click", (event) => {
+                seleccionarReceta(event,idMeal ?? receta.id)
+            }) */
 
             const recipeTime = document.createElement("span")
             recipeTime.classList.add("recipe-card__time")
-            recipeTime.innerHTML = `<img class="recipe-card__icon" loading="lazy" src="images/clock.svg" alt="clock-icon">30 min`
+            recipeTime.innerHTML = `<img class="recipe-card__icon" loading="lazy"  height="20" width="20" src="images/clock.svg" alt="clock-icon"> ${recipeTimes[index]} min`
 
             const recipeBottom = document.createElement("div")
             recipeBottom.classList.add("recipe-card__bottom")
@@ -116,20 +122,33 @@ function iniciarApp() {
             recipeDiv.appendChild(recipeBottom)
             results.appendChild(recipeDiv)
         })
+        launchDeatailModal()
     }
+    
+    function launchDeatailModal () {
+        document.addEventListener("click", function(e){
+            if ( e.target.classList.contains("recipe-card__button") || e.target.classList.contains("recipe-card__img")){
+                 let id = e.target.closest(".recipe-card__info").dataset.id
+                 let time = e.target.closest(".recipe-card__info").dataset.time
+                 seleccionarReceta(id,time)
+            }
+        })
+    }
+    
 
-    async function seleccionarReceta(id) {
+    async function seleccionarReceta(id,time) {          
+
         const url = `https://themealdb.com/api/json/v1/1/lookup.php?i=${id}`
         try {
             const response = await fetch(url)
             const data = await response.json()
-            mostrarRecetaModal(data.meals[0])
+            mostrarRecetaModal(data.meals[0],time)
         } catch (e) {
             console.error("Error fetching recipe details:", e)
         }
     }
 
-    function mostrarRecetaModal(receta) {
+    function mostrarRecetaModal(receta , time) {
         const { idMeal, strInstructions, strMeal, strMealThumb } = receta
 
         const recipeContent = document.createElement("div")
@@ -162,7 +181,7 @@ function iniciarApp() {
                 <div class="recipe-detail__type-time">
                     <span class="recipe-detail__type">${receta.strCategory}</span>
                     <span class="recipe-detail__time">
-                    <img class="recipe-detail__icon" loading="lazy" src="images/clock.svg" alt="clock-icon">30 min</span>
+                    <img class="recipe-detail__icon" loading="lazy" src="images/clock.svg" alt="clock-icon">${time} min</span>
                 </div>
                 <h4 class="recipe-detail__subtitle">Instrucciones</h4>
                 <p class="recipe-detail__instructions">${strInstructions}</p>
@@ -252,7 +271,7 @@ function iniciarApp() {
             selector.removeChild(selector.firstChild)
         }
     }
-
+   
     function cargarSelect(data = []) {
         data.forEach(item => {
             const option = document.createElement("option")

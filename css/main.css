@@ -178,6 +178,7 @@ summary {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
+      line-clamp: 2;
       overflow: hidden; }
   .recipe-card__info {
     position: relative;
@@ -228,7 +229,8 @@ summary {
     font-size: 0.9rem; }
   .recipe-card__icon {
     vertical-align: top;
-    margin-inline: 0 0.5rem; }
+    margin-inline: 0 0.5rem;
+    display: inline-block; }
   .recipe-card__bottom {
     font-size: .9rem;
     padding: 1.25rem 0;
@@ -269,11 +271,12 @@ summary {
     gap: 5%;
     padding: 2rem 4rem 8rem; }
   .recipe-detail__title {
-    width: 95%;
+    width: 90%;
     font-size: 2.5rem;
     font-weight: 400;
-    margin-block: 0 2rem;
-    color: #1F4311; }
+    margin-block: 0 2.5rem;
+    color: #1F4311;
+    line-height: 1.3; }
   .recipe-detail__subtitle {
     font-size: 1.3rem;
     font-weight: 500;
@@ -638,3 +641,7 @@ select:invalid {
       color: #E8C054;
       font-size: 1.25rem;
       line-height: 1; }
+
+@media (false) {
+  * {
+    font-size: 5rem; } }
