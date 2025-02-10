@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Buscador Recetas Comida</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap" rel="stylesheet">
-    
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    </head>
-    <body class="body-bg">
-        <div class="wrap-nav">
-            <nav class="navbar u-max-width">
-                <img src="images/tasty-recipes.svg" alt="" class="logo">
-                <div class="container-menu">
-                    <ul class="menu">
-                        <li class="menu__item">Inicio</li>
-                        <li class="menu__item"><a href="favoritos.html">Mis favoritos</a></li>
-                        <li class="menu__item">Contacto</li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Recetas Comida</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script defer src="js/app-v2.js" type="module"></script>
+
+</head>
+
+<body class="body-bg">
+    <div class="wrap-nav">
+        <nav class="navbar u-max-width">
+            <img src="images/tasty-recipes.svg" alt="" class="logo">
+            <div class="container-menu">
+                <ul class="menu">
+                    <li class="menu__item">Inicio</li>
+                    <li class="menu__item"><a href="favoritos.html">Mis favoritos</a></li>
+                    <li class="menu__item">Contacto</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
     <section class="wrap-favorites " id="wrap-favorites">
         <h3 class="results-heading-favorites" id="results-heading"></h3>
         <div class="results u-max-width" id="results"></div>
@@ -37,8 +40,5 @@
         <div id="recipe-detail" class="recipe-detail">
         </div>
     </section>
-
-  
-    <script src="js/app-v2.js"></script>
 </body>
 </html>

@@ -100,7 +100,8 @@ summary {
     width: 45%;
     height: 1px;
     background-color: #1f431131;
-    margin-block: 1rem auto; }
+    margin-block: 1rem auto;
+    pointer-events: none; }
   .wrap-favorites .results-heading-favorites {
     display: inline-block;
     padding: 3rem;
@@ -196,7 +197,8 @@ summary {
       height: 40%;
       border-radius: 16px 16px 0 0;
       background: linear-gradient(180deg, rgba(37, 45, 35, 0.8), rgba(91, 109, 84, 0));
-      mix-blend-mode: multiply; }
+      mix-blend-mode: multiply;
+      pointer-events: none; }
     .recipe-card__info::after {
       top: auto;
       bottom: 0;
