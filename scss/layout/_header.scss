@@ -1,0 +1,20 @@
+@use "../globals" as *;
+
+.wrap-nav {
+    background-color: white;
+    padding-block: $space-base * 3;
+    box-shadow: 0px 4px 4px rgba(24, 26, 23, 0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}

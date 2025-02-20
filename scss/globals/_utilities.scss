@@ -1,0 +1,10 @@
+
+@use "_variables" as *;
+
+.u-max-width {
+    max-width: $desktop-width;
+    margin-inline: auto;
+}
+.u-hide {
+    display: none;
+}

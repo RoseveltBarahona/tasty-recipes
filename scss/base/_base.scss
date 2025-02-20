@@ -1,0 +1,16 @@
+@use "../globals" as * ;
+
+* { 
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: "Poppins", serif;
+    color: $black-color;
+}
+
+.body-bg {
+    background-color: #F7F0DD;
+}
+
+.main {
+    margin-inline: auto;
+}

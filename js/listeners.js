@@ -13,9 +13,7 @@ function launchDetaillModal() {
         if (e.target.classList.contains("wrap-recipe-detail")) {
             uiCloseRecipeModal()
         }
-        if (e.target.nodeName === 'BODY') {
-            console.log("body")
-        }
+        //if (e.target.nodeName === 'BODY') / e.target.tagName != 'selector' 
     })
 }
 

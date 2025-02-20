@@ -1,3 +1,5 @@
+@use "../globals" as * ;
+
 .wrap-recipe-detail {
     width: 100vw;
     height: 100vh;
@@ -9,6 +11,14 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
+    transition: opacity 0.3s ease ,  visibility 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+
+    &--show{
+        visibility: visible;
+        opacity: 1;  
+    }
 
 }
 
@@ -124,7 +134,7 @@
     &__time,
     &__type {
         color: #FFFBEF;
-        padding: $space-base / 2 $space-base * 4;
+        padding: calc($space-base / 2) $space-base * 4;
     }
 
     &__icon {
@@ -162,5 +172,25 @@
     }
 }
 
+
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: .3s;
+    animation-delay: .1s;
+    //animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,100%,0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
 
 @media screen and (min-height: 860px)  {  }

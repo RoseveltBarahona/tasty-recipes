@@ -134,12 +134,16 @@ function uiMostrarRecetaModal(receta, time) {
     recipeContent.appendChild(recipeDetailsFooter)
 
     // mostrar detalle de receta
-    wrapRecipeDetail.classList.remove("u-hide")
+    //wrapRecipeDetail.classList.remove("u-hide")
+    wrapRecipeDetail.classList.add("wrap-recipe-detail--show")
 }
 
 function uiCloseRecipeModal() {
-    uiLimpiarHtml(recipeDetails)
-    wrapRecipeDetail.classList.add("u-hide")
+    setTimeout(() => {
+        uiLimpiarHtml(recipeDetails) 
+    }, 300);
+    
+    wrapRecipeDetail.classList.remove("wrap-recipe-detail--show")
 }
 
 function uiLimpiarHtml(selector) {

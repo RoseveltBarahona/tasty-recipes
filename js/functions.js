@@ -53,8 +53,6 @@ function obtenerFavoritos() {
     }
 }
 
-
-
 function cargarSelect(data = []) {
     data.forEach(item => {
         const option = document.createElement("option")

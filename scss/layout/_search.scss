@@ -1,0 +1,109 @@
+@use "../globals" as *;
+
+.titles {
+    text-align: center;
+}
+
+.title,
+.subtitle {
+    //font-family: "Inria Serif", serif;
+    font-weight: 400;
+    color: #1F4311;
+    line-height: 1.2;
+    letter-spacing: -0.01rem;
+}
+
+.title {
+    font-size: 2.75rem;
+    margin-block: 4rem 0;
+}
+
+.subtitle {
+    font-size: 2.25rem;
+    margin-block: .5rem 2.5rem;
+}
+
+.select-category {
+    background-color: #FFE292;
+    width: 850px;
+    height: 250px;
+    position: relative;
+    background-image: url(../images/search-bg-2.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 100px;
+    background-size: 100%;
+    border-radius: $space-base * 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $space-base * 3;
+    margin-inline: auto;
+    text-align: center;
+
+    &__info {
+        font-size: $font-size-base;
+        font-weight: 500;
+        margin-block: .25rem 1rem;
+    }
+
+    &__wrap-select {
+        position: relative;
+        width: 65%;
+        margin-block: 0 1.5rem;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            color: #285716;
+            cursor: pointer;
+            pointer-events: none;
+        }
+
+        &::after {
+            content: "\25BE";
+            right: 1.25rem;
+            top: .5rem;
+            font-size: 1.5rem;
+            color: #1F4311
+        }
+
+        &::before {
+            content: "";
+            top: 0;
+            right: 3.5rem;
+            height: 100%;
+            width: 1px;
+            background-color: rgba(40, 87, 22, 0.5);
+        }
+    }
+
+    &__select {
+        appearance: none;
+        padding: .9rem 4rem .9rem 1.5rem;
+        //color: #666;
+        font-size: $font-size-base;
+        outline: none;
+        border: solid 1px #223b1875;
+        width: 100%;
+        border-radius: $space-base * 2;
+        box-shadow: 0px 12px 12px rgba(24, 26, 23, 0.2);
+    }
+
+    @media screen and (min-width: 360px) {
+        width: 100%;
+        background-position: center bottom;
+        background-size: 200%;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 99%;
+
+        &__wrap-select {
+            width: 100%;
+        }
+    }
+}
+
+select:invalid {
+    color: #777
+}
