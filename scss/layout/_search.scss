@@ -1,7 +1,12 @@
 @use "../globals" as *;
 
+
 .titles {
     text-align: center;
+    padding-inline: $space-base;
+    @media screen and (min-width: 1024px) {
+        padding:  0;
+    }
 }
 
 .title,
@@ -14,29 +19,38 @@
 }
 
 .title {
-    font-size: 2.75rem;
-    margin-block: 4rem 0;
+    font-size: 2rem;
+    margin-block: 3rem 1rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 2.75rem;
+        margin-block: 4rem 0;
+    }
 }
 
 .subtitle {
-    font-size: 2.25rem;
-    margin-block: .5rem 2.5rem;
+    font-size: 1.5rem;
+    margin-block: .5rem 1.5rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 2.25rem;
+        margin-block: .5rem 2.5rem;
+    }
 }
 
 .select-category {
     background-color: #FFE292;
-    width: 850px;
-    height: 250px;
+    width: 95%;
+    max-width: 540px;
+    min-height: 250px;
     position: relative;
     background-image: url(../images/search-bg-2.jpg);
     background-repeat: no-repeat;
-    background-position: 0 100px;
-    background-size: 100%;
+    background-position: center bottom;
+    background-size: 180%;
     border-radius: $space-base * 5;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $space-base * 3;
+    padding: $space-base * 3 $space-base * 2;
     margin-inline: auto;
     text-align: center;
 
@@ -48,7 +62,7 @@
 
     &__wrap-select {
         position: relative;
-        width: 65%;
+        width: 100%;
         margin-block: 0 1.5rem;
 
         &::after,
@@ -88,18 +102,22 @@
         width: 100%;
         border-radius: $space-base * 2;
         box-shadow: 0px 12px 12px rgba(24, 26, 23, 0.2);
+    }    
+
+    @media screen and (min-width: 460px) {      
+        background-size: 150%;       
     }
 
-    @media screen and (min-width: 360px) {
-        width: 100%;
-        background-position: center bottom;
-        background-size: 200%;
-        padding: 1rem;
-        border-radius: 1rem;
-        width: 99%;
+    @media screen and (min-width: 1024px) {
+        width: 850px;
+        height: 250px;
+        max-width: none;
+        background-position: 0 100px;        
+        background-size: 100%;
+        padding: $space-base * 3;        
 
         &__wrap-select {
-            width: 100%;
+            width: 65%;
         }
     }
 }

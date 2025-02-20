@@ -1,30 +1,48 @@
 @use "../globals" as *;
 
+.body-bg {
+    background-color: #F7F0DD;
+}
+
+.main {
+    margin-inline: auto;
+
+}
 
 // top categories
+
+.wrap-categories {
+    background-color: white;
+}
 
 .main-categories {
     margin-block: -5rem 0;
     padding-block: 11rem 4rem;
-    background-color: white;
+    padding-inline: $space-base;
+
+    @media screen and (min-width: 1024px) {
+        padding-inline: 0;
+    }
 }
 
 .categories {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: $space-base ;
 
-    @media screen and (min-width: 360px) {
-        grid-template-columns: 1fr 1fr;
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0
     }
 }
 
 .category {
     background-color: #FAF8F0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
+    //justify-content: space-around;
     padding: $space-base * 2;
     border-radius: $space-base * 3;
 
@@ -42,7 +60,7 @@
     }
 
     &__image {
-        width: 110px;
+        width: 60%;
         height: auto;
         aspect-ratio: 55 / 49;
         display: block;
@@ -85,50 +103,66 @@
     }
 
     @media screen and (min-width: 360px) {
-        flex-wrap: wrap;
 
         &__title {
             width: 100%;
         }
     }
+
+    @media screen and (min-width: 1024px) {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        &__image {
+            width: 110px;
+        }
+    }
 }
 
-//top recipes
 
+//top recipes
 .section__title {
     font-size: 1.5rem;
     line-height: 1.3;
     margin-block: 0 0;
     display: inline-block;
     font-weight: 500;
+    padding-inline: $space-base;
 }
 
 .section__subtitle {
     margin-block: .5rem 2rem;
+    padding-inline: $space-base;
 }
 
+@media screen and (min-width: 1024px) {
+    .section__title, .section__subtitle{
+        padding-inline: 0;
+    }
+}
 .main-recipes {
     padding-block: 4rem 8rem;
 }
 
 .recipes {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: $space-base * 3;
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    gap: $space-base * 2;
 
-    @media screen and (min-width: 360px) {
-        width: 100%;
-        overflow-x: scroll;
-        display: flex;
-        gap: $space-base * 2;
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: $space-base * 3;
     }
-
 }
 
 .recipe {
     background-color: white;
     padding: 1rem 1rem 0;
     border-radius: $space-base * 3;
+    width: 75vw;
+    flex-shrink: 0;
 
     &__top {
         position: relative;
@@ -216,14 +250,11 @@
             line-height: 1;
         }
     }
+    @media screen and (min-width: 768px) {
+        width: 35vw;
+    }
 
-    @media screen and (min-width: 360px) {
-        width: 75vw;
-        flex-shrink: 0;
-        //padding: .5rem;
-
-        &__info-bottom {
-            flex-wrap: wrap;
-        }
+    @media screen and (min-width: 1024px) {
+        width: auto;
     }
 }
