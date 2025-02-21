@@ -20,13 +20,6 @@
         visibility: visible;
         opacity: 1;  
     }
-
-    @media screen and (min-width: 768px) {      
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: $space-base * 3;     
-    }
-
-
 }
 
 .recipe-detail {
@@ -35,19 +28,21 @@
     border-radius: $space-base * 2;
     position: relative;
 
+    width: 100%;
+
     &__content {
         max-width: 1100px;
-        max-height: 85vh;
+        max-height: 95vh;
         overflow-y: scroll;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        //flex-wrap: wrap;
         gap: 5%;
-        padding: 2rem 4rem 8rem;
+        padding: 1rem .5rem 8rem;
     }
 
     &__title {
-        width: 90%;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 400;
         margin-block: 0 2.5rem;
         color: #1F4311;
@@ -59,10 +54,6 @@
         font-weight: 500;
         color: $dark-green;
         margin-block: 1.75rem 1rem;
-    }
-
-    &__image-and-ingredients {
-        width: 38%;
     }
 
     &__image {
@@ -117,13 +108,13 @@
     }
 
     &__info {
-        width: 57%;
         background-color: #EBF2E9;
-        padding: 2.5rem;
+        padding: 1.25rem;
         border-radius: $space-base;
         display: flex;
         flex-direction: column;
         align-items: start;
+        margin-top: 2rem;
     }
 
     &__type-time {
@@ -175,7 +166,38 @@
         gap: 1rem;
         align-items: center;
         justify-content: end;
+        padding-inline: 1rem;
+    }
+
+
+
+    @media screen and (min-width: 768px) { 
+
+        width: auto;
+
+        &__content {
+            padding: 2rem 4rem 8rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-height: 85vh;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+            width: 90%;
+        }
+        &__image-and-ingredients {
+            width: 38%;
+        }
+        &__info {
+            width: 57%;
+            margin-top: 0;
+            padding: 2.5rem;
+        }
+        
+    &__footer {
         padding-inline: 5rem;
+    }            
     }
 }
 
