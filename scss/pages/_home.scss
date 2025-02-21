@@ -17,11 +17,12 @@
 
 .main-categories {
     margin-block: -5rem 0;
-    padding-block: 11rem 4rem;
+    padding-block: 10rem 4rem;
     padding-inline: $space-base;
 
     @media screen and (min-width: 1024px) {
         padding-inline: 0;
+        padding-block: 11rem 4rem;
     }
 }
 
@@ -40,7 +41,6 @@
     background-color: #FAF8F0;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     align-items: center;
     //justify-content: space-around;
     padding: $space-base * 2;
@@ -51,6 +51,7 @@
         font-size: 1.5rem;
         font-weight: 400;
         font-size: $font-size-base;
+        width: 100%;
     }
 
     &__wrap-image {
@@ -102,16 +103,13 @@
         color: #AB6509;
     }
 
-    @media screen and (min-width: 360px) {
-
-        &__title {
-            width: 100%;
-        }
-    }
-
     @media screen and (min-width: 1024px) {
         flex-wrap: nowrap;
         justify-content: space-around;
+
+        &__title {
+            width: auto;
+        }
 
         &__image {
             width: 110px;
@@ -256,5 +254,6 @@
 
     @media screen and (min-width: 1024px) {
         width: auto;
+        overflow-x: initial;
     }
 }

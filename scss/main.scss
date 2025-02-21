@@ -1,9 +1,7 @@
-@use "globals" as *;
 
 @use "base";
-
 @use "components/buttons";
-@use "../scss/layout/_header";
+@use "../scss/layout/nav";
 @use "../scss/layout/search";
 @use "../scss/layout/results";
 @use "../scss/layout/recipe-detail";
@@ -13,10 +11,8 @@
 
 
 
-
-
-
-
-//sass scss:output/css
-//sass --watch scss:css
-//sass scss:css   -ok Recommendation: math.div($space-base, 2) or calc($space-base / 2)
+/*
+https://www.npmjs.com/package/group-css-media-queries
+group-css-media-queries css/main.css css/output.css
+sass --no-source-map --watch scss:css
+*/

@@ -20,7 +20,7 @@
 
 .title {
     font-size: 2rem;
-    margin-block: 3rem 1rem;
+    margin-block: 2.5rem 1rem;
     @media screen and (min-width: 1024px) {
         font-size: 2.75rem;
         margin-block: 4rem 0;
@@ -28,8 +28,9 @@
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    margin-block: .5rem 1.5rem;
+    font-size: 1.25rem;
+    margin-block: 0 1.5rem;
+    text-wrap-style: balance;
     @media screen and (min-width: 1024px) {
         font-size: 2.25rem;
         margin-block: .5rem 2.5rem;
@@ -98,7 +99,7 @@
         //color: #666;
         font-size: $font-size-base;
         outline: none;
-        border: solid 1px #223b1875;
+        border: solid 1px #1c31138b;
         width: 100%;
         border-radius: $space-base * 2;
         box-shadow: 0px 12px 12px rgba(24, 26, 23, 0.2);
@@ -119,9 +120,12 @@
         &__wrap-select {
             width: 65%;
         }
+        &__select {
+            border-color:#223b1875;
+        } 
     }
 }
 
 select:invalid {
-    color: #777
+    color: #666
 }
