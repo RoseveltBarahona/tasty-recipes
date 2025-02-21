@@ -149,7 +149,7 @@
     display: flex;
     gap: $space-base * 2;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: $space-base * 3;
@@ -256,6 +256,5 @@
 
     @media screen and (min-width: 1024px) {
         width: auto;
-        overflow-x: initial;
     }
 }
