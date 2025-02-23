@@ -4,7 +4,7 @@
 .titles {
     text-align: center;
     padding-inline: $space-base;
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         padding:  0;
     }
 }
@@ -21,7 +21,7 @@
 .title {
     font-size: 2rem;
     margin-block: 2.5rem 1rem;
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         font-size: 2.75rem;
         margin-block: 4rem 0;
     }
@@ -31,7 +31,7 @@
     font-size: 1.25rem;
     margin-block: 0 1.5rem;
     text-wrap-style: balance;
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         font-size: 2.25rem;
         margin-block: .5rem 2.5rem;
     }
@@ -110,7 +110,7 @@
         background-size: 150%;       
     }
 
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         width: 850px;
         height: 250px;
         max-width: none;

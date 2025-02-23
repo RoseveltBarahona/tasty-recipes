@@ -10,7 +10,6 @@
 }
 
 /*******************   top categories     ********************/
-
 .wrap-categories {
     background-color: white;
 }
@@ -20,7 +19,7 @@
     padding-block: 10rem 4rem;
     padding-inline: $space-base;
 
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         padding-inline: 0;
         padding-block: 11rem 4rem;
     }
@@ -31,7 +30,7 @@
     grid-template-columns: 1fr 1fr;
     gap: $space-base ;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0
     }
@@ -103,7 +102,7 @@
         color: #AB6509;
     }
 
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         flex-wrap: nowrap;
         justify-content: space-around;
 
@@ -119,7 +118,6 @@
 
 
 /*******************   top recipes     ********************/
-
 .section__title {
     font-size: 1.5rem;
     line-height: 1.3;
@@ -134,7 +132,7 @@
     padding-inline: $space-base;
 }
 
-@media screen and (min-width: 1024px) {
+@include desktop {
     .section__title, .section__subtitle{
         padding-inline: 0;
     }
@@ -149,7 +147,7 @@
     display: flex;
     gap: $space-base * 2;
 
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: $space-base * 3;
@@ -250,11 +248,11 @@
             line-height: 1;
         }
     }
-    @media screen and (min-width: 768px) {
+    @include tablet {
         width: 35vw;
     }
 
-    @media screen and (min-width: 1024px) {
+    @include desktop {
         width: auto;
     }
 }
