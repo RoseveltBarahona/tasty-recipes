@@ -1,4 +1,3 @@
-
 @use "base";
 @use "components/buttons";
 @use "../scss/layout/nav";
@@ -10,8 +9,8 @@
 
 
 
-
 /*
+git config --global core.pager cat
 https://www.npmjs.com/package/group-css-media-queries
 group-css-media-queries css/main.css css/output.css
 sass --no-source-map --watch scss:css

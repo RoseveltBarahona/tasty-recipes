@@ -1,4 +1,4 @@
-@use "../globals" as * ;
+@use "../globals" as *;
 
 .wrap-recipe-detail {
     width: 100vw;
@@ -12,13 +12,13 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
-    transition: opacity 0.3s ease ,  visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     visibility: hidden;
     opacity: 0;
 
-    &--show{
+    &--show {
         visibility: visible;
-        opacity: 1;  
+        opacity: 1;
     }
 }
 
@@ -169,35 +169,34 @@
         padding-inline: 1rem;
     }
 
-
-
-    @media screen and (min-width: 768px) { 
-
+    @include tablet {
         width: auto;
 
         &__content {
             padding: 2rem 4rem 8rem;
             flex-direction: row;
             flex-wrap: wrap;
-            max-height: 85vh;
+            max-height: 90vh;
         }
 
         &__title {
             font-size: 2.5rem;
             width: 90%;
         }
+
         &__image-and-ingredients {
             width: 38%;
         }
+
         &__info {
             width: 57%;
             margin-top: 0;
             padding: 2.5rem;
         }
-        
-    &__footer {
-        padding-inline: 5rem;
-    }            
+
+        &__footer {
+            padding-inline: 5rem;
+        }
     }
 }
 
@@ -213,7 +212,7 @@
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translate3d(0,100%,0)
+        transform: translate3d(0, 100%, 0)
     }
 
     to {
@@ -222,4 +221,4 @@
     }
 }
 
-@media screen and (min-height: 860px)  {  }
+@media screen and (min-height: 860px) {}

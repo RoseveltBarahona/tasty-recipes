@@ -668,7 +668,7 @@ select:invalid {
     padding: 2rem 4rem 8rem;
     flex-direction: row;
     flex-wrap: wrap;
-    max-height: 85vh;
+    max-height: 90vh;
   }
   .recipe-detail__title {
     font-size: 2.5rem;
@@ -938,6 +938,7 @@ select:invalid {
 }
 
 /*
+git config --global core.pager cat
 https://www.npmjs.com/package/group-css-media-queries
 group-css-media-queries css/main.css css/output.css
 sass --no-source-map --watch scss:css
