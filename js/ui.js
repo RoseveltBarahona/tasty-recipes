@@ -1,19 +1,19 @@
 
-import { selectCategories, maincategories, mainrecipes, wrapResults, resultHeading, recipeTimes, recipeDetails, wrapRecipeDetail } from "./selectores.js"
+import { selectCategories, mainCategories, mainRecipes, wrapResults, resultHeading, recipeTimes, recipeDetails, wrapRecipeDetail } from "./selectores.js"
 import { launchDetaillModal, existeYaEnStorage, addToFavorites } from "./functions.js"
 export { uiMostrarRecetas, uiMostrarRecetaModal, uiCloseRecipeModal }
 
 function uiMostrarRecetas(recetas, fromStorage = false, typeFromSearch) {
     if (!fromStorage) {
-        maincategories.classList.add("u-hide")
-        mainrecipes.classList.add("u-hide")
+        mainCategories.classList.add("u-hide")
+        mainRecipes.classList.add("u-hide")
         wrapResults.classList.remove("u-hide")
     }
 
     uiLimpiarHtml(results)
 
     if (selectCategories) {
-        let textInfo = selectCategories.value
+        let textInfo = typeFromSearch //selectCategories.value
         resultHeading.textContent = recetas.length ? `Resultados ${textInfo} :` : "No hay resultados"
     }
 

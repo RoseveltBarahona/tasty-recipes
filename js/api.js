@@ -17,8 +17,9 @@ async function obtenerCategorias() {
 }
 
 
-async function seleccionarCategoria() {
-    const categoria = selectCategories.value.trim()
+async function seleccionarCategoria( topCategory ) {
+    const categoria = selectCategories.value.trim() || topCategory 
+    
 
     if (categoria === "") {
         alert("Selecciona una categoría")

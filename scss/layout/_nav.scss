@@ -15,6 +15,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &__logo {
+       line-height: 0;
+    }
 }
 .logo{
     width: 140px;

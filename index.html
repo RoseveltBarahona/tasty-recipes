@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <script defer src="js/app-v2.js" type="module"></script>    
+    <script defer src="js/app-v2.js" type="module"></script>
 
 </head>
 
 <body class="body-bg">
     <div class="wrap-nav">
         <nav class="navbar u-max-width">
-            <img src="images/tasty-recipes.svg" alt="" class="logo">
+            <a class="navbar__logo" href="https://roseveltbarahona.github.io/tasty-recipes/"><img src="images/tasty-recipes.svg" alt="" class="logo"></a>
             <div id="burger-menu" class="burger-menu">
                 <span>Menu</span>
                 <div class="burger-menu__icon">
@@ -25,8 +25,8 @@
                     <span class="burger-menu__icon-line"></span>
                     <span class="burger-menu__icon-line"></span>
                 </div>
-            </div>           
-            
+            </div>
+
             <div id="container-menu" class="container-menu">
                 <ul id="menu" class="menu">
                     <li class="menu__item menu__item--active">Inicio</li>
@@ -37,8 +37,7 @@
         </nav>
     </div>
 
-    <main class="main ">
-
+    <main class="main">
         <section class="titles u-max-width">
             <h1 class="title">Todos podemos ser un gran cocinero</h1>
             <h2 class="subtitle">¡Encuentra una gran receta para hoy!</h2>
@@ -59,42 +58,42 @@
                 <p class="section__subtitle">Estas son las categorías mas populares entre nuestros usuarios:</p>
 
                 <div class="categories">
-                    <div class="category">
+                    <div class="category" data-category="seafood">
                         <h4 class="category__title"> Recetas <span class="category__title-acent">pescados</span></h4>
                         <div class="category__wrap-image">
                             <img class="category__image" src="images/image-1.jpg" alt="image">
                             <img class="category__icon" src="images/arrow-right.svg" alt="icon">
                         </div>
                     </div>
-                    <div class="category">
+                    <div class="category" data-category="vegetarian">
                         <h4 class="category__title"> Recetas <span class="category__title-acent">veganas</span></h4>
                         <div class="category__wrap-image">
                             <img class="category__image" src="images/image-2.jpg" alt="image">
                             <img class="category__icon" src="images/arrow-right.svg" alt="icon">
                         </div>
                     </div>
-                    <div class="category">
+                    <div class="category" data-category="pasta">
                         <h4 class="category__title"> Recetas <span class="category__title-acent">pasta</span></h4>
-                        <div class="category__wrap-image">
-                            <img class="category__image" src="images/image-3.jpg" alt="image">
-                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
-                        </div>
-                    </div>
-                    <div class="category">
-                        <h4 class="category__title"> Recetas <span class="category__title-acent">desayunos</span></h4>
-                        <div class="category__wrap-image">
-                            <img class="category__image" src="images/image-4.jpg" alt="image">
-                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
-                        </div>
-                    </div>
-                    <div class="category">
-                        <h4 class="category__title"> Recetas <span class="category__title-acent">postres</span></h4>
                         <div class="category__wrap-image">
                             <img class="category__image" src="images/image-5.jpg" alt="image">
                             <img class="category__icon" src="images/arrow-right.svg" alt="icon">
                         </div>
                     </div>
-                    <div class="category">
+                    <div class="category" data-category="breakfast">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">desayunos</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-3.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="category" data-category="dessert">
+                        <h4 class="category__title"> Recetas <span class="category__title-acent">postres</span></h4>
+                        <div class="category__wrap-image">
+                            <img class="category__image" src="images/image-4.jpg" alt="image">
+                            <img class="category__icon" src="images/arrow-right.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="category" data-category="starter">
                         <h4 class="category__title"> Recetas <span class="category__title-acent">entrantes</span></h4>
                         <div class="category__wrap-image">
                             <img class="category__image" src="images/image-6.jpg" alt="image">
@@ -110,24 +109,24 @@
 
             <div class="recipes">
                 <div class="recipe">
-                    <div class="recipe__top">
+                    <div class="recipe__top" data-time="40" data-id="52783">
                         <img class="recipe__image" src="images/receta-1.jpg" alt="receta">
                         <div class="recipe__info">
-                            <h4 class="recipe__title">Lamb Pilaf</h4>
+                            <h4 class="recipe__title">Rigatoni with fennel sausage sauce</h4>
                             <div class="recipe__info-bottom">
                                 <button class="recipe__button">Ver receta</button>
                                 <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
-                                        alt="clock-icon">30 min</span>
+                                        alt="clock-icon">40 min</span>
                             </div>
                         </div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                    <div class="recipe__bottom"><span>●</span> Lamb</div>
                 </div>
                 <div class="recipe">
-                    <div class="recipe__top">
+                    <div class="recipe__top" data-time="30" data-id="53008">
                         <img class="recipe__image" src="images/receta-2.jpg" alt="receta">
                         <div class="recipe__info">
-                            <h4 class="recipe__title">Pate Chinois</h4>
+                            <h4 class="recipe__title">Stuffed Lamb Tomatoes</h4>
                             <div class="recipe__info-bottom">
                                 <button class="recipe__button">Ver receta</button>
                                 <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
@@ -135,27 +134,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                    <div class="recipe__bottom"><span>●</span> Lamb</div>
                 </div>
                 <div class="recipe">
-                    <div class="recipe__top">
+                    <div class="recipe__top" data-time="40" data-id="52907">
                         <img class="recipe__image" src="images/receta-3.jpg" alt="receta">
                         <div class="recipe__info">
-                            <h4 class="recipe__title">Lamb Pilaf</h4>
+                            <h4 class="recipe__title">Duck Confit</h4>
                             <div class="recipe__info-bottom">
                                 <button class="recipe__button">Ver receta</button>
                                 <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
-                                        alt="clock-icon">30 min</span>
+                                        alt="clock-icon">40 min</span>
                             </div>
                         </div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                    <div class="recipe__bottom"><span>●</span> Miscellaneous</div>
                 </div>
                 <div class="recipe">
-                    <div class="recipe__top">
+                    <div class="recipe__top" data-time="30" data-id="52839">
                         <img class="recipe__image" src="images/receta-4.jpg" alt="receta">
                         <div class="recipe__info">
-                            <h4 class="recipe__title">Lamb Pilaf</h4>
+                            <h4 class="recipe__title">Chilli prawn linguine</h4>
                             <div class="recipe__info-bottom">
                                 <button class="recipe__button">Ver receta</button>
                                 <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
@@ -163,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Dessert</div>
+                    <div class="recipe__bottom"><span>●</span> Pasta</div>
                 </div>
             </div>
         </section>
@@ -174,7 +173,7 @@
         <div class="results u-max-width" id="results"></div>
     </section>
 
-    
+
     <section class="wrap-recipe-detail" id="wrap-recipe-detail">
         <div id="recipe-detail" class="recipe-detail">
         </div>
