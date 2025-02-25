@@ -1,5 +1,5 @@
 
-import {selectCategorias, resultHeading} from "./selectores.js"
+import {selectCategories, resultHeading} from "./selectores.js"
 import {launchDetaillModal} from "./listeners.js"
 import {uiMostrarRecetas} from "./ui.js"
 export {cargarSelect, launchDetaillModal, existeYaEnStorage, addToFavorites, obtenerFavoritos}
@@ -58,6 +58,6 @@ function cargarSelect(data = []) {
         const option = document.createElement("option")
         option.value = item.strCategory
         option.textContent = item.strCategory
-        selectCategorias.appendChild(option)
+        selectCategories.appendChild(option)
     })
 }

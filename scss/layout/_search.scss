@@ -107,7 +107,11 @@
     }    
 
     @media screen and (min-width: 460px) {      
-        background-size: 150%;       
+        background-size: 150%;  
+        &__wrap-select {
+            width: 90%;
+        }
+             
     }
 
     @include desktop {

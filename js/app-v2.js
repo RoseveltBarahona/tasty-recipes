@@ -1,11 +1,11 @@
 import { obtenerCategorias, seleccionarCategoria } from "./api.js"
-import {selectCategorias, btnSearch ,wrapFavorites} from "./selectores.js"
+import {selectCategories, btnSearch ,wrapFavorites} from "./selectores.js"
 import {obtenerFavoritos} from "./functions.js"
 
 document.addEventListener("DOMContentLoaded", iniciarApp)
 
 function iniciarApp() {
-    if (selectCategorias) {
+    if (selectCategories) {
         obtenerCategorias()
         btnSearch.addEventListener("click", seleccionarCategoria)
     }

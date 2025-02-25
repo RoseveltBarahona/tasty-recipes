@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <script defer src="js/app-v2.js" type="module"></script>    
 
@@ -18,13 +16,22 @@
 
 <body class="body-bg">
     <div class="wrap-nav">
-        <nav class="navbar u-max-width" style="display: none;">
+        <nav class="navbar u-max-width">
             <img src="images/tasty-recipes.svg" alt="" class="logo">
-            <div class="container-menu">
-                <ul class="menu">
-                    <li class="menu__item">Inicio</li>
-                    <li class="menu__item"><a href="favoritos.html">Mis favoritos</a></li>
-                    <li class="menu__item">Contacto</li>
+            <div id="burger-menu" class="burger-menu">
+                <span>Menu</span>
+                <div class="burger-menu__icon">
+                    <span class="burger-menu__icon-line"></span>
+                    <span class="burger-menu__icon-line"></span>
+                    <span class="burger-menu__icon-line"></span>
+                </div>
+            </div>           
+            
+            <div id="container-menu" class="container-menu">
+                <ul id="menu" class="menu">
+                    <li class="menu__item menu__item--active">Inicio</li>
+                    <li class="menu__item"><a class="menu__link" href="favoritos.html">Mis favoritos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="contacto.html">contacto</a></li>
                 </ul>
             </div>
         </nav>

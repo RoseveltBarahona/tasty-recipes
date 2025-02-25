@@ -7,7 +7,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,27 +197,6 @@
         &__footer {
             padding-inline: 5rem;
         }
-    }
-}
-
-
-
-.animate__fadeInUp {
-    animation-name: fadeInUp;
-    animation-duration: .3s;
-    animation-delay: .1s;
-    //animation-fill-mode: forwards;
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0)
-    }
-
-    to {
-        opacity: 1;
-        transform: translateZ(0)
     }
 }
 

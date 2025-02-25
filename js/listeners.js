@@ -1,6 +1,7 @@
 
 import { seleccionarReceta } from "./api.js"
 import { uiCloseRecipeModal } from "./ui.js"
+import { burgerMenu, containerMenu, menu, selectCategories, btnSearch } from "./selectores.js"
 export { launchDetaillModal }
 
 function launchDetaillModal() {
@@ -17,3 +18,19 @@ function launchDetaillModal() {
     })
 }
 
+document.addEventListener("click", function(e){
+    if (e.target.closest( ".burger-menu")){
+        burgerMenu.classList.toggle("burger-menu--open")
+        containerMenu.classList.toggle("container-menu--open")
+        document.body.classList.toggle("u-no-scroll")
+    }
+})
+
+if (selectCategories){
+    selectCategories.addEventListener("change", function(){
+        btnSearch.classList.add("animate__shake")
+        setTimeout(() => {
+            btnSearch.classList.remove("animate__shake")
+        }, 900);
+    })
+}

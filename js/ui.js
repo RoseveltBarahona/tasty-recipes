@@ -1,5 +1,5 @@
 
-import { selectCategorias, maincategories, mainrecipes, wrapResults, resultHeading, recipeTimes, recipeDetails, wrapRecipeDetail } from "./selectores.js"
+import { selectCategories, maincategories, mainrecipes, wrapResults, resultHeading, recipeTimes, recipeDetails, wrapRecipeDetail } from "./selectores.js"
 import { launchDetaillModal, existeYaEnStorage, addToFavorites } from "./functions.js"
 export { uiMostrarRecetas, uiMostrarRecetaModal, uiCloseRecipeModal }
 
@@ -12,8 +12,8 @@ function uiMostrarRecetas(recetas, fromStorage = false, typeFromSearch) {
 
     uiLimpiarHtml(results)
 
-    if (selectCategorias) {
-        let textInfo = selectCategorias.value
+    if (selectCategories) {
+        let textInfo = selectCategories.value
         resultHeading.textContent = recetas.length ? `Resultados ${textInfo} :` : "No hay resultados"
     }
 
