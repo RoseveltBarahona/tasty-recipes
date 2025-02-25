@@ -1,6 +1,6 @@
 
 import {cargarSelect} from "./functions.js"
-import {selectCategorias } from "./selectores.js"
+import {selectCategories } from "./selectores.js"
 import {uiMostrarRecetas, uiMostrarRecetaModal} from "./ui.js"
 export {obtenerCategorias, seleccionarCategoria, seleccionarReceta}
 
@@ -18,7 +18,7 @@ async function obtenerCategorias() {
 
 
 async function seleccionarCategoria() {
-    const categoria = selectCategorias.value.trim()
+    const categoria = selectCategories.value.trim()
 
     if (categoria === "") {
         alert("Selecciona una categoría")

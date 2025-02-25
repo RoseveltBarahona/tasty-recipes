@@ -1,0 +1,34 @@
+
+
+
+.animate__shake {
+    animation-name: horizontal-shaking;
+    animation-duration: .6s;
+    animation-delay: .3s;
+}
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(10px) }
+    50% { transform: translateX(-10px) }
+    75% { transform: translateX(10px) }
+    100% { transform: translateX(0) }
+  }
+
+
+/* .animate__fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: .3s;
+    animation-delay: .1s;
+    //animation-fill-mode: forwards;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+} */

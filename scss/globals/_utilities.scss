@@ -1,5 +1,6 @@
 
 @use "_variables" as *;
+@use "_mixins" as *;
 
 .u-max-width {
     max-width: $desktop-width;
@@ -7,4 +8,12 @@
 }
 .u-hide {
     display: none;
+}
+
+.u-no-scroll {
+    overflow: hidden;
+    
+    @include tablet {
+        overflow: auto; 
+    }
 }
