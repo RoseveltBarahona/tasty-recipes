@@ -8,6 +8,7 @@ function iniciarApp() {
     if (selectCategories) {
         obtenerCategorias()
         btnSearch.addEventListener("click", seleccionarCategoria)
+        btnSearch.disabled = false
     }
     if (wrapFavorites) {
         obtenerFavoritos()

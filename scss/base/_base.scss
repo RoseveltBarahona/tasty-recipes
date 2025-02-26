@@ -10,3 +10,7 @@
 a {
     text-decoration: none;
 }
+[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

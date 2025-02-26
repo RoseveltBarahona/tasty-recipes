@@ -235,7 +235,7 @@
 
     &__title {
         font-size: 1.25rem;
-        line-height: 1.4;
+        line-height: 1.3;
         font-weight: 500;
         margin: 0;
         color: white;
@@ -301,5 +301,25 @@
 
     @include desktop {
         width: auto;
+        &__info-bottom {
+            flex-wrap: wrap;
+        }
+
+        &__button {
+            width: 100%;
+            order: 2;
+            margin-top: .25rem;
+        }
     }
+    @media screen and (min-width: 1200px) {
+        &__info-bottom {
+            flex-wrap: nowrap;
+        }
+
+        &__button {
+            width: auto;
+            order: initial;
+            margin-top: 0;
+        }
+    } 
 }

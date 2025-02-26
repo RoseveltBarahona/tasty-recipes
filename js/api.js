@@ -20,10 +20,11 @@ async function obtenerCategorias() {
 async function seleccionarCategoria( topCategory ) {
     const categoria = selectCategories.value.trim() || topCategory 
     
-    if (categoria === "") {
+    if (categoria === "" || categoria.length === undefined) {
         alert("Selecciona una categoría")
         return
     }
+    
     loaderBackground.classList.add("loader-background--show")
     const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoria}`
     
@@ -35,8 +36,8 @@ async function seleccionarCategoria( topCategory ) {
         console.error("Error fetching recipes:", e)
     }
     finally {
-        //selectCategories.selectedIndex = 0
         loaderBackground.classList.remove("loader-background--show")
+        //selectCategories.selectedIndex = 0
     }
 }
 
