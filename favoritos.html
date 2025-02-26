@@ -18,8 +18,16 @@
 <body class="body-bg">
     <div class="wrap-nav">
         <nav class="navbar u-max-width">
-            <img src="images/tasty-recipes.svg" alt="" class="logo">
-            <div class="container-menu">
+            <a class="navbar__logo" href="https://roseveltbarahona.github.io/tasty-recipes/"><img src="images/tasty-recipes.svg" alt="" class="logo"></a>
+            <div id="burger-menu" class="burger-menu">
+                <span>Menu</span>
+                <div class="burger-menu__icon">
+                    <span class="burger-menu__icon-line"></span>
+                    <span class="burger-menu__icon-line"></span>
+                    <span class="burger-menu__icon-line"></span>
+                </div>
+            </div>
+            <div id="container-menu" class="container-menu">
                 <ul class="menu">
                     <li class="menu__item"><a class="menu__item__link" href="index.html">Inicio</a></li>
                     <li class="menu__item menu__item--active">Favoritos</li>
@@ -39,5 +47,8 @@
         <div id="recipe-detail" class="recipe-detail animate__fadeInUp">
         </div>
     </section>
+    <div class="loader-background" id="loader-background">
+        <span class="loader"></span>
+    </div>
 </body>
 </html>

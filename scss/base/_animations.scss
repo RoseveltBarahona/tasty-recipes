@@ -1,6 +1,5 @@
 
-
-
+//shake animation
 .animate__shake {
     animation-name: horizontal-shaking;
     animation-duration: .6s;
@@ -14,6 +13,63 @@
     100% { transform: translateX(0) }
   }
 
+// loader animation
+.loader-background {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    &--show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.loader, .loader:before, .loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation-fill-mode: both;
+    animation: loading 1.8s infinite ease-in-out;
+  }
+  .loader {
+    color: #FFF;
+    font-size: 7px;
+    position: relative;
+    //text-indent: -9999em;
+
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+  }
+  .loader:before,
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  .loader:before {
+    left: -3.5em;
+    animation-delay: -0.32s;
+  }
+  .loader:after {
+    left: 3.5em;
+  }
+  
+  @keyframes loading {
+    0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+    40% { box-shadow: 0 2.5em 0 0 }
+  }
+   
+      
 
 /* .animate__fadeInUp {
     animation-name: fadeInUp;
@@ -21,14 +77,4 @@
     animation-delay: .1s;
     //animation-fill-mode: forwards;
 }
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0)
-    }
-
-    to {
-        opacity: 1;
-        transform: translateZ(0)
-    }
-} */
+@keyframes fadeInUp {} */

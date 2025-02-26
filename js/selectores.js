@@ -1,4 +1,4 @@
-export {selectCategories, mainCategories, mainRecipes, wrapResults, results, resultHeading, wrapRecipeDetail, recipeDetails, wrapFavorites, btnSearch, containerMenu, burgerMenu, menu,recipeTimes}
+export {selectCategories, mainCategories, mainRecipes, wrapResults, results, resultHeading, wrapRecipeDetail, recipeDetails, wrapFavorites, btnSearch, containerMenu, burgerMenu, menu, loaderBackground,recipeTimes}
 
 const selectCategories = document.querySelector("#category")
 const mainCategories = document.querySelector("#main-categories")
@@ -11,6 +11,7 @@ const wrapRecipeDetail = document.querySelector("#wrap-recipe-detail")
 const recipeDetails = document.querySelector("#recipe-detail")
 const wrapFavorites = document.querySelector("#wrap-favorites")
 const btnSearch = document.querySelector("#btn-search")
+const loaderBackground = document.querySelector("#loader-background")
 
 const containerMenu = document.querySelector("#container-menu")
 const burgerMenu = document.querySelector("#burger-menu")

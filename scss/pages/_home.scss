@@ -45,12 +45,14 @@
     //justify-content: space-around;
     padding: $space-base * 2;
     border-radius: $space-base * 3;
-
+    outline-color: transparent;
+    transition: outline .3s ease-in;
+    cursor: pointer;
 
     &__title {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 400;
-        font-size: $font-size-base;
+        //font-size: $font-size-base;
         width: 100%;
     }
 
@@ -67,12 +69,16 @@
         display: block;
         mix-blend-mode: darken;
         filter: saturate(1.3);
+        transition: transform .2s ease-in;
+
     }
 
     &__icon {
         padding: calc($space-base / 2);
         border-radius: 50%;
         background-color: #1F4311;
+        transition: transform .2s ease-in;
+
     }
 
     &__title-acent {
@@ -101,6 +107,20 @@
 
     &:nth-child(6) &__title-acent {
         color: #AB6509;
+    }
+
+    &:hover {
+        outline: 1px rgb(214, 200, 160) solid;
+        outline-offset: -1px;
+        background-color: #fffdf7;
+
+        .category__icon {
+            transform: translate(8px, 0);
+        }
+
+        .category__image {
+            transform: scale(1.05);
+        }
     }
 
     @include desktop {
@@ -134,10 +154,13 @@
 }
 
 @include desktop {
-    .section__title, .section__subtitle{
+
+    .section__title,
+    .section__subtitle {
         padding-inline: 0;
     }
 }
+
 .main-recipes {
     padding-block: 4rem 8rem;
 }
@@ -166,7 +189,7 @@
     &__top {
         position: relative;
         background-color: #111;
-
+        cursor: pointer;
 
         &::before,
         &::after {
@@ -194,6 +217,7 @@
         height: auto;
         aspect-ratio: 92/141;
         display: block;
+        transition: opacity .2s ease-in;
         opacity: 0.95;
     }
 
@@ -231,6 +255,8 @@
         color: white;
         border: solid 1px rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(15px);
+        transition: background-color .3s ease-in;
+        cursor: pointer;
     }
 
     &__time {
@@ -254,6 +280,21 @@
             line-height: 1;
         }
     }
+
+    &:hover {
+        .recipe__image {
+            opacity: .8;
+        }
+
+        .recipe__button {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    @media screen and (min-width: 460px) {
+        width: 60vw;
+    }
+
     @include tablet {
         width: 35vw;
     }

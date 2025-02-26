@@ -26,7 +26,6 @@
                     <span class="burger-menu__icon-line"></span>
                 </div>
             </div>
-
             <div id="container-menu" class="container-menu">
                 <ul id="menu" class="menu">
                     <li class="menu__item menu__item--active">Inicio</li>
@@ -43,10 +42,10 @@
             <h2 class="subtitle">¡Encuentra una gran receta para hoy!</h2>
         </section>
         <section class="select-category">
-            <div class="select-category__info">Escoge una categoría y empecemos:</div>
+            <div class="select-category__info">Selecciona una categoría:</div>
             <div class="select-category__wrap-select">
                 <select required name="category" id="category" class="select-category__select">
-                    <option value="" selected hidden>-- Selecciona --</option> <!-- disabled -->
+                    <option value="" selected hidden>-- Seleccionar --</option> <!-- disabled -->
                 </select>
             </div>
             <button id="btn-search" class="btn-primary">Buscar recetas</button>
@@ -178,6 +177,10 @@
         <div id="recipe-detail" class="recipe-detail">
         </div>
     </section>
+
+    <div class="loader-background" id="loader-background">
+        <span class="loader"></span>
+    </div>
 </body>
 
 </html>
