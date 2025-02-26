@@ -3,7 +3,9 @@ import { selectCategories, mainCategories, mainRecipes, wrapResults, resultHeadi
 import { launchDetaillModal, existeYaEnStorage, addToFavorites } from "./functions.js"
 export { uiMostrarRecetas, uiMostrarRecetaModal, uiCloseRecipeModal }
 
-function uiMostrarRecetas(recetas, fromStorage = false, typeFromSearch) {
+function uiMostrarRecetas(recetas, fromStorage = false, categoria) {
+
+    // si no viene de favoritos ocultamos las categorias y recetas principales
     if (!fromStorage) {
         mainCategories.classList.add("u-hide")
         mainRecipes.classList.add("u-hide")
@@ -13,11 +15,12 @@ function uiMostrarRecetas(recetas, fromStorage = false, typeFromSearch) {
     uiLimpiarHtml(results)
 
     if (selectCategories) {
-        let textInfo = typeFromSearch //selectCategories.value
+        let textInfo = categoria //selectCategories.value
         resultHeading.textContent = recetas.length ? `Resultados ${textInfo} :` : "No hay resultados"
     }
 
     recetas.forEach(receta => {
+        console.log(receta)
         let index = Math.floor(Math.random() * 3);
         const { idMeal, strMeal, strMealThumb, type } = receta
         /* if (fromStorage) {idMeal = receta.id strMeal = receta.title strMealThumb = receta.img } */
@@ -55,7 +58,7 @@ function uiMostrarRecetas(recetas, fromStorage = false, typeFromSearch) {
 
         const recipeBottom = document.createElement("div")
         recipeBottom.classList.add("recipe-card__bottom")
-        recipeBottom.innerHTML = `<span>●</span> ${type ?? typeFromSearch}`
+        recipeBottom.innerHTML = `<span>●</span> ${type ?? categoria}`
 
         wrapBtnTime.appendChild(recetaBtn)
         wrapBtnTime.appendChild(recipeTime)
