@@ -17,13 +17,19 @@ async function obtenerCategorias() {
 }
 
 
-async function seleccionarCategoria( topCategory ) {
-    const categoria = selectCategories.value.trim() || topCategory 
+async function seleccionarCategoria( fromTopCategory ) {
+
+    let categoria = selectCategories.value.trim()
+
+    // si viene desde un click en una categoria principal 
+    if (typeof fromTopCategory  === "string") {
+        categoria = fromTopCategory
+    }
     
-    if (categoria === "" || categoria.length === undefined) {
+    if (categoria === "" ) {
         alert("Selecciona una categoría")
         return
-    }
+    }    
     
     loaderBackground.classList.add("loader-background--show")
     const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoria}`
