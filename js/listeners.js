@@ -48,7 +48,7 @@ if (mainCategories){
     mainCategories.addEventListener("click", function(e){
         if (e.target.closest(".category")){
             let category = e.target.closest(".category").dataset.category
-            seleccionarCategoria(category)
+            seleccionarCategoria(e,category)
             //selectCategories.value = category
             //btnSearch.click()
         }

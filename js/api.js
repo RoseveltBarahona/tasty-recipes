@@ -17,12 +17,11 @@ async function obtenerCategorias() {
 }
 
 
-async function seleccionarCategoria( fromTopCategory ) {
+async function seleccionarCategoria( e, fromTopCategory = false) {
 
     let categoria = selectCategories.value.trim()
 
-    // si viene desde un click en una categoria principal 
-    if (typeof fromTopCategory  === "string") {
+    if (fromTopCategory) {
         categoria = fromTopCategory
     }
     

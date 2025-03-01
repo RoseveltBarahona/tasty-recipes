@@ -180,6 +180,9 @@
 }
 
 .recipe {
+
+    $this: &;
+
     background-color: white;
     padding: 1rem 1rem 0;
     border-radius: $space-base * 3;
@@ -282,11 +285,11 @@
     }
 
     &:hover {
-        .recipe__image {
+        #{$this}__image {
             opacity: .8;
         }
 
-        .recipe__button {
+        #{$this}__button {
             background-color: rgba(255, 255, 255, 0.2);
         }
     }

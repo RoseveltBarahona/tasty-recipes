@@ -1,4 +1,5 @@
 @use "../globals" as *;
+@use 'sass:color';
 
 .wrap-nav {
     background-color: white;
@@ -36,7 +37,7 @@
         width: 28px;
         height: 24px;
         position: relative;
-        margin: $space-base / 2 auto 0;
+        margin: calc($space-base / 2) auto 0;
         position: relative;
         z-index: 3;
     }
@@ -140,6 +141,7 @@
     &__link {
         &:hover {
             color: darken($primary-color, 20%);
+           //color: color.adjust($primary-color, $lightness: -20%)
         }
     }
 
@@ -153,11 +155,9 @@
             border: none;
             padding: 0;
         }
-    }
 
-    &__item--active {
-        font-weight: 600;
-    }
-
-    
+        &__item--active {
+            font-weight: 600;
+        }
+    }        
 }
