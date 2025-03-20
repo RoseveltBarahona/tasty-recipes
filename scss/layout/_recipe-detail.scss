@@ -60,7 +60,7 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        aspect-ratio: 1 / .85;
+        aspect-ratio: 1 / .7;
         border-radius: $space-base;
     }
 
@@ -120,6 +120,7 @@
     &__type-time {
         background-color: $dark-green;
         display: inline-flex;
+        align-items: center;
         //padding: $space-base / 2;
         border-radius: $space-base;
         font-size: .9rem;
@@ -132,7 +133,7 @@
     &__time,
     &__type {
         color: #FFFBEF;
-        padding: calc($space-base / 2) $space-base * 4;
+        padding: $space-base  $space-base * 3;
     }
 
     &__icon {
@@ -188,6 +189,10 @@
 
         &__image-and-ingredients {
             width: 38%;
+        }
+        
+        &__image {
+            aspect-ratio: 1 / .85;
         }
 
         &__info {
