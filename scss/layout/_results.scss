@@ -76,7 +76,7 @@
     }
 
     @include tablet {
-        margin-top: 5rem;
+        //margin-top: 5rem;
     }
 }
 
@@ -199,7 +199,7 @@
         border-radius: 2rem;
         padding: 0.75rem 1.25rem;
         color: white;
-        border: solid 1px rgba(255, 255, 255, 0.4);
+        border: solid 1px rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(20px);
         transition: background-color 0.3s ease-in;
         cursor: pointer;

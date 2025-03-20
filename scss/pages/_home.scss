@@ -2,7 +2,7 @@
 @use "../base" as *;
 
 .body-bg {
-    background-color: #F7F0DD;
+    background-color: #EAE9D0;
 }
 
 .main {
@@ -11,12 +11,20 @@
 }
 
 /*******************   top categories     ********************/
-.wrap-categories {
+.main-categories-wrap {
     background-color: white;
+}
+.beige-background {
+    background-color: #f7efd8;
+    padding-block: 2.5rem 5rem;
+
+    @include desktop {
+        padding-block: 4rem 5rem;
+    }
 }
 
 .main-categories {
-    margin-block: -5rem 0;
+    margin-block: -10rem 0;
     padding-block: 10rem 4rem;
     padding-inline: $space-base;
 
@@ -38,12 +46,12 @@
 }
 
 .category {
-    background-color: #FAF8F0;
+    background-color:  #FAF8F0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     //justify-content: space-around;
-    padding: $space-base * 2;
+    padding: $space-base * 2.5 $space-base * 2;
     border-radius: $space-base * 3;
     outline-color: transparent;
     transition: outline .3s ease-in;
@@ -132,7 +140,7 @@
         }
 
         &__image {
-            width: 110px;
+            width: 95px;
         }
     }
 }
@@ -149,7 +157,7 @@
 }
 
 .section__subtitle {
-    margin-block: .5rem 2rem;
+    margin-block: .25rem 2.25rem;
     padding-inline: $space-base;
 }
 
@@ -162,7 +170,7 @@
 }
 
 .main-recipes {
-    padding-block: 4rem 8rem;
+    padding-block: 5rem 8rem;
 }
 
 .recipes {
@@ -183,7 +191,7 @@
 
     $this: &;
 
-    background-color: white;
+    background-color: #f9f8f1;
     padding: 1rem 1rem 0;
     border-radius: $space-base * 3;
     width: 71vw;
@@ -221,7 +229,7 @@
         aspect-ratio: 92/141;
         display: block;
         transition: opacity .2s ease-in;
-        opacity: 0.95;
+        opacity: 0.9;
     }
 
     &__info {
@@ -238,7 +246,7 @@
 
     &__title {
         font-size: 1.25rem;
-        line-height: 1.3;
+        line-height: 1.25;
         font-weight: 500;
         margin: 0;
         color: white;
@@ -256,7 +264,7 @@
         border-radius: 2rem;
         padding: 0.75rem 1.25rem;
         color: white;
-        border: solid 1px rgba(255, 255, 255, 0.3);
+        border: solid 1px rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(15px);
         transition: background-color .3s ease-in;
         cursor: pointer;
@@ -274,7 +282,7 @@
 
     &__bottom {
         font-size: 1rem;
-        padding: $space-base * 2.5 0;
+        padding: $space-base * 3 0;
         color: #50545B;
 
         span {

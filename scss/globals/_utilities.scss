@@ -6,6 +6,11 @@
     max-width: $desktop-width;
     margin-inline: auto;
 }
+.u-separator {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
 .u-hide {
     display: none;
 }

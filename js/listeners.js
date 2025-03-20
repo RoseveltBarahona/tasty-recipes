@@ -45,9 +45,9 @@ if (selectCategories){
 
 //main category click
 if (mainCategories){
-    mainCategories.addEventListener("click", function(e){
-        if (e.target.closest(".category")){
-            let category = e.target.closest(".category").dataset.category
+    document.addEventListener("click", function(e){
+        if (e.target.closest(".category") || e.target.closest(".tags__item")){
+            let category = e.target.closest(".category")?.dataset.category ?? e.target.closest(".tags__item").dataset.category
             seleccionarCategoria(e,category)
             //selectCategories.value = category
             //btnSearch.click()

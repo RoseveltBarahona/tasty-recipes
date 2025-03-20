@@ -17,7 +17,8 @@
 <body class="body-bg">
     <div class="wrap-nav">
         <nav class="navbar u-max-width">
-            <a class="navbar__logo" href="https://roseveltbarahona.github.io/tasty-recipes/"><img src="images/tasty-recipes.svg" alt="" class="logo"></a>
+            <a class="navbar__logo" href="https://roseveltbarahona.github.io/tasty-recipes/"><img
+                    src="images/tasty-recipes.svg" alt="" class="logo"></a>
             <div id="burger-menu" class="burger-menu">
                 <span>Menu</span>
                 <div class="burger-menu__icon">
@@ -37,22 +38,23 @@
     </div>
 
     <main class="main">
-        <section class="titles u-max-width">
-            <h1 class="title">Todos podemos ser un gran cocinero</h1>
-            <h2 class="subtitle">¡Encuentra una gran receta para hoy!</h2>
-        </section>
-        <section class="select-category">
-            <div class="select-category__info">Selecciona una categoría:</div>
-            <div class="select-category__wrap-select">
-                <select name="category" id="category" class="select-category__select" required>
-                    <option value="" selected hidden>-- Seleccionar --</option> <!-- disabled -->
-                </select>
-            </div>
-            <button disabled id="btn-search" class="btn-primary">Buscar recetas</button>
-        </section>
-
-        <div class="wrap-categories">
-            <section class="main-categories u-max-width" id="main-categories">
+        <div class="beige-background">
+            <section class="titles u-max-width">
+                <h1 class="title">Todos podemos ser un gran cocinero</h1>
+                <h2 class="subtitle">¡Encuentra una gran receta para hoy!</h2>
+            </section>
+            <section class="select-category">
+                <div class="select-category__info">Selecciona una categoría:</div>
+                <div class="select-category__wrap-select">
+                    <select name="category" id="category" class="select-category__select" required>
+                        <option value="" selected hidden>-- Seleccionar --</option> <!-- disabled -->
+                    </select>
+                </div>
+                <button disabled id="btn-search" class="btn-primary">Buscar recetas</button>
+            </section>
+        </div>
+        <div class="main-categories-wrap" id="main-categories">
+            <section class="main-categories u-max-width" >
                 <h3 class="section__title">Categorías destacadas</h3>
                 <p class="section__subtitle">Estas son las categorías mas populares entre nuestros usuarios:</p>
 
@@ -101,67 +103,88 @@
                     </div>
                 </div>
             </section>
+            <hr class="u-separator">
+            <section class="u-max-width wrap-tags">
+                <h3 class="section__title">¿Y si probamos algo nuevo?</h3>
+                <p class="section__subtitle">Estas son las categorías mas populares entre nuestros usuarios:</p>
+                <div class="tags">
+                    <button class="tags__item" data-category="chicken"><img class="tags__icon"  src="images/vegetarian.svg" alt="image-vegetarian">Vegetarian</button>
+                    <button class="tags__item" data-category="Lamb">Chicken</button>
+                    <button class="tags__item" data-category="Lamb"><img class="tags__icon" src="images/lamb.svg"
+                            alt="image-lamb">Lamb</button>
+                    <button class="tags__item" data-category="lamb"><img class="tags__icon" src="images/beef.svg"
+                            alt="image-beef">Beef</button>
+                    <button class="tags__item" data-category="duck">Pork</button>
+                    <button class="tags__item" data-category="fish">Breakfast</button>
+                    <button class="tags__item" data-category="seafood"><img class="tags__icon" src="images/pasta.svg"
+                            alt="image-pasta">Pasta</button>
+                    <button class="tags__item" data-category="vegetarian">Side</button>
+                    <button class="tags__item" data-category="vegan"><img class="tags__icon" src="images/starter.svg"
+                            alt="image-starter">Starter</button>
+                    <button class="tags__item" data-category="pasta"><img class="tags__icon" src="images/seafood.svg"
+                            alt="image-seafood">Seafood</button>
+                    <button class="tags__item" data-category="breakfast">Vegan</button>
+                    <button class="tags__item" data-category="dessert">Dessert</button>
+                    <button class="tags__item" data-category="starter">Goat</button>
+                    <button class="tags__item" data-category="starter"> Miscellaneous</button>
+                </div>
+            </section>
         </div>
+
         <section class="main-recipes u-max-width" id="main-recipes">
             <h3 class="section__title">Ultima recetas añadidas</h3>
             <p class="section__subtitle">Descubre nuestras últimas recetas añadidas</p>
 
-            <div class="recipes">
-                <div class="recipe">
-                    <div class="recipe__top" data-time="40" data-id="52783">
-                        <img class="recipe__image" src="images/receta-1.jpg" alt="receta">
-                        <div class="recipe__info">
-                            <h4 class="recipe__title">Rigatoni with fennel sausage sauce</h4>
-                            <div class="recipe__info-bottom">
-                                <button class="recipe__button">Ver receta</button>
-                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
-                                        alt="clock-icon">40 min</span>
-                            </div>
-                        </div>
+            <div class="results u-max-width" >
+                <div class="recipe-card">
+                    <h4 class="recipe-card__title"><span class="recipe-card__title-content">Bean &amp; Sausage
+                            Hotpot</span></h4>
+                    <div class="recipe-card__info" data-time="30" data-id="52783"><img loading="lazy" draggable="false"
+                            class="recipe-card__img" alt="Imagen de Bean &amp; Sausage Hotpot"
+                            src="images/receta-1.jpg">
+                        <div class="recipe-card__wrap-btn-time" data-time="30"><button class="recipe-card__button">Ver
+                                receta</button><span class="recipe-card__time"><img class="recipe-card__icon"
+                                    loading="lazy" height="20" width="20" src="images/clock.svg" alt="clock-icon"> 30
+                                min</span></div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Lamb</div>
+                    <div class="recipe-card__bottom"><span>●</span> Lamb</div>
                 </div>
-                <div class="recipe">
-                    <div class="recipe__top" data-time="30" data-id="53008">
-                        <img class="recipe__image" src="images/receta-2.jpg" alt="receta">
-                        <div class="recipe__info">
-                            <h4 class="recipe__title">Stuffed Lamb Tomatoes</h4>
-                            <div class="recipe__info-bottom">
-                                <button class="recipe__button">Ver receta</button>
-                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
-                                        alt="clock-icon">30 min</span>
-                            </div>
-                        </div>
+                <div class="recipe-card">
+                    <h4 class="recipe-card__title"><span class="recipe-card__title-content">Lancashire hotpot</span>
+                    </h4>
+                    <div class="recipe-card__info" data-time="30" data-id="53008"><img loading="lazy" draggable="false"
+                            class="recipe-card__img" alt="Imagen de Lancashire hotpot" src="images/receta-2.jpg">
+                        <div class="recipe-card__wrap-btn-time" data-time="30"><button class="recipe-card__button">Ver
+                                receta</button><span class="recipe-card__time"><img class="recipe-card__icon"
+                                    loading="lazy" height="20" width="20" src="images/clock.svg" alt="clock-icon"> 30
+                                min</span></div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Lamb</div>
+                    <div class="recipe-card__bottom"><span>●</span> Lamb</div>
                 </div>
-                <div class="recipe">
-                    <div class="recipe__top" data-time="40" data-id="52907">
-                        <img class="recipe__image" src="images/receta-3.jpg" alt="receta">
-                        <div class="recipe__info">
-                            <h4 class="recipe__title">Duck Confit</h4>
-                            <div class="recipe__info-bottom">
-                                <button class="recipe__button">Ver receta</button>
-                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
-                                        alt="clock-icon">40 min</span>
-                            </div>
-                        </div>
+                <div class="recipe-card">
+                    <h4 class="recipe-card__title"><span class="recipe-card__title-content">Stuffed Lamb Tomatoes</span>
+                    </h4>
+                    <div class="recipe-card__info" data-time="30" data-id="52907"><img loading="lazy" draggable="false"
+                            class="recipe-card__img" alt="Imagen de Stuffed Lamb Tomatoes" src="images/receta-3.jpg">
+                        <div class="recipe-card__wrap-btn-time" data-time="30"><button class="recipe-card__button">Ver
+                                receta</button><span class="recipe-card__time"><img class="recipe-card__icon"
+                                    loading="lazy" height="20" width="20" src="images/clock.svg" alt="clock-icon"> 30
+                                min</span></div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Miscellaneous</div>
+                    <div class="recipe-card__bottom"><span>●</span> Miscellaneous</div>
                 </div>
-                <div class="recipe">
-                    <div class="recipe__top" data-time="30" data-id="52839">
-                        <img class="recipe__image" src="images/receta-4.jpg" alt="receta">
-                        <div class="recipe__info">
-                            <h4 class="recipe__title">Chilli prawn linguine</h4>
-                            <div class="recipe__info-bottom">
-                                <button class="recipe__button">Ver receta</button>
-                                <span class="recipe__time"> <img class="recipe__icon" src="images/clock.svg"
-                                        alt="clock-icon">30 min</span>
-                            </div>
-                        </div>
+                <div class="recipe-card">
+                    <h4 class="recipe-card__title"><span class="recipe-card__title-content">Rigatoni with fennel sausage
+                            sauce</span></h4>
+                    <div class="recipe-card__info" data-time="40" data-id="52839"><img loading="lazy" draggable="false"
+                            class="recipe-card__img" alt="Imagen de Rigatoni with fennel sausage sauce"
+                            src="images/receta-4.jpg">
+                        <div class="recipe-card__wrap-btn-time" data-time="40"><button class="recipe-card__button">Ver
+                                receta</button><span class="recipe-card__time"><img class="recipe-card__icon"
+                                    loading="lazy" height="20" width="20" src="images/clock.svg" alt="clock-icon"> 40
+                                min</span></div>
                     </div>
-                    <div class="recipe__bottom"><span>●</span> Pasta</div>
+                    <div class="recipe-card__bottom"><span>●</span> Pasta</div>
                 </div>
             </div>
         </section>
