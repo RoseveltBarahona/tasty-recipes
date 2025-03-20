@@ -90,6 +90,10 @@
     background-color: #EAE9D0;
     position: relative;
     z-index: 1;
+
+    @include tablet {
+        padding: 3rem;
+    }
 }
 
 .results {

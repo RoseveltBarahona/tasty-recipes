@@ -71,6 +71,10 @@ function uiMostrarRecetas(recetas, fromStorage = false, categoria) {
         results.appendChild(recipeDiv)
     })
     launchDetaillModal()
+    if (innerWidth < 768) {
+        wrapResults.scrollIntoView({ block:"start", behavior: "smooth" })
+    }
+   
 }
 
 
