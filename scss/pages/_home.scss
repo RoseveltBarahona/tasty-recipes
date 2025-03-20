@@ -25,12 +25,12 @@
 
 .main-categories {
     margin-block: -10rem 0;
-    padding-block: 10rem 4rem;
+    padding-block: 10rem 5rem;
     padding-inline: $space-base;
 
     @include desktop {
         padding-inline: 0;
-        padding-block: 11rem 4rem;
+        padding-block: 11rem 5rem;
     }
 }
 

@@ -288,7 +288,7 @@ summary {
 }
 @media screen and (min-width: 768px) {
   .logo {
-    width: initial;
+    width: 190px;
   }
 }
 
@@ -1051,13 +1051,13 @@ select:invalid {
 
 .main-categories {
   margin-block: -10rem 0;
-  padding-block: 10rem 4rem;
+  padding-block: 10rem 5rem;
   padding-inline: 0.5rem;
 }
 @media screen and (min-width: 1024px) {
   .main-categories {
     padding-inline: 0;
-    padding-block: 11rem 4rem;
+    padding-block: 11rem 5rem;
   }
 }
 
