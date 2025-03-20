@@ -47,13 +47,13 @@
 
 .wrap-results {
     background-color: #EAE9D0;
-    margin-top: 2rem;
+    //margin-top: 2rem;
     position: relative;
     text-align: center;
 
     &::before {
         content: "";
-        position: absolute;
+        position: absolute; 
         display: block;
         top: 45px;
         left: 0;

@@ -12,7 +12,7 @@ function addToFavorites(idMeal, strMeal, strMealThumb) {
     if (existeYaEnStorage(idMeal)) {
         eliminarFavorito(idMeal)
         alert("favorito eliminado")
-        favoriteBtn.textContent = "Guardar favoritoN"
+        favoriteBtn.textContent = "Guardar favorito"
         return
     }
 

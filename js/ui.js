@@ -124,7 +124,7 @@ function uiMostrarRecetaModal(receta, time) {
     const favoritoBtn = document.createElement("button")
     favoritoBtn.classList.add("btn-primary", "btn-primary--small")
     favoritoBtn.id = "favorite-btn"
-    favoritoBtn.textContent = existeYaEnStorage(idMeal) ? "Eliminar favorito" : "Guardar favorito---"
+    favoritoBtn.textContent = existeYaEnStorage(idMeal) ? "Eliminar favorito" : "Guardar favorito"
     favoritoBtn.onclick = () => { addToFavorites(idMeal, strMeal, strMealThumb) }
 
     const cerrarBtn = document.createElement("button")
