@@ -454,7 +454,7 @@ summary {
 }
 
 .select-category {
-  background-color: #FFE292;
+  background-color: #ffe694;
   max-width: 540px;
   min-height: 250px;
   position: relative;
@@ -511,7 +511,10 @@ summary {
   border: solid 1px #868f83;
   width: 100%;
   border-radius: 1rem;
-  box-shadow: 0px 12px 12px rgba(24, 26, 23, 0.2);
+  box-shadow: 0px 12px 12px rgba(24, 26, 23, 0.1);
+}
+.select-category__select:focus-visible {
+  outline: solid 2px rgb(0, 95, 204);
 }
 @media screen and (min-width: 460px) {
   .select-category {
@@ -526,8 +529,8 @@ summary {
   .select-category {
     width: 850px;
     height: 250px;
-    max-width: 750px;
-    background-position: 0 100px;
+    max-width: 730px;
+    background-position: 0 102px;
     background-size: 100%;
     padding: 1.5rem;
   }
@@ -537,7 +540,7 @@ summary {
 }
 
 select:invalid {
-  color: #666;
+  color: #555;
 }
 
 .wrap-tags {
@@ -1087,10 +1090,10 @@ select:invalid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 1.25rem 1rem;
+  padding: 1.125rem 1rem;
+  border: solid 1px transparent;
   border-radius: 1.5rem;
-  outline-color: transparent;
-  transition: outline 0.3s ease-in;
+  transition: border 0.3s ease-in;
   cursor: pointer;
 }
 .category__title {
@@ -1140,8 +1143,7 @@ select:invalid {
   color: #AB6509;
 }
 .category:hover {
-  outline: 1px rgb(214, 200, 160) solid;
-  outline-offset: -1px;
+  border: 1px rgb(214, 200, 160) solid;
   background-color: #fffdf7;
 }
 .category:hover .category__icon {

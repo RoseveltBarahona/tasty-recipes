@@ -51,10 +51,10 @@
     flex-wrap: wrap;
     align-items: center;
     //justify-content: space-around;
-    padding: $space-base * 2.5 $space-base * 2;
+    padding: $space-base * 2.25 $space-base * 2;
+    border: solid 1px transparent;
     border-radius: $space-base * 3;
-    outline-color: transparent;
-    transition: outline .3s ease-in;
+    transition: border .3s ease-in;
     cursor: pointer;
 
     &__title {
@@ -118,8 +118,7 @@
     }
 
     &:hover {
-        outline: 1px rgb(214, 200, 160) solid;
-        outline-offset: -1px;
+        border: 1px rgb(214, 200, 160) solid;
         background-color: #fffdf7;
 
         .category__icon {

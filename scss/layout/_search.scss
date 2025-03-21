@@ -39,7 +39,7 @@
 }
 
 .select-category {
-    background-color: #FFE292;
+    background-color: #ffe694;
     //width: 97%;
     max-width: 540px;
     min-height: 250px;
@@ -98,13 +98,16 @@
     &__select {
         appearance: none;
         padding: .9rem 4rem .9rem 1.5rem;
-        //color: #666;
         font-size: $font-size-base;
         outline: none;
         border: solid 1px #868f83;;
         width: 100%;
         border-radius: $space-base * 2;
-        box-shadow: 0px 12px 12px rgba(24, 26, 23, 0.2);
+        box-shadow: 0px 12px 12px rgba(24, 26, 23, 0.1);
+
+        &:focus-visible {
+            outline: solid 2px rgb(0, 95, 204);
+        }
     }    
 
     @media screen and (min-width: 460px) {      
@@ -120,8 +123,8 @@
     @include desktop {
         width: 850px;
         height: 250px;
-        max-width: 750px;
-        background-position: 0 100px;        
+        max-width: 730px;
+        background-position: 0 102px;        
         background-size: 100%;
         padding: $space-base * 3;        
 
@@ -132,5 +135,5 @@
 }
 
 select:invalid {
-    color: #666
+    color: #555
 }
