@@ -1,7 +1,7 @@
 @use "../globals" as *;
 
 .wrap-recipe-detail {
-    width: 100vw;
+    filter: saturate(1.05);    width: 100vw;
     height: 100vh;
     position: fixed;
     left: 0;

@@ -26,7 +26,7 @@ function iniciarGSAP() {
 
     gsap.from(".recipe-card",{
         opacity: 0, 
-        y: 50,
+        y: 100,
         duration: .8,        
         ease: "power2.out",
         scrollTrigger: {

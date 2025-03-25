@@ -863,6 +863,7 @@ select:invalid {
 }
 
 .wrap-recipe-detail {
+  filter: saturate(1.05);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -1044,6 +1045,7 @@ select:invalid {
 
 .main {
   margin-inline: auto;
+  filter: saturate(1.05);
 }
 
 /*******************   top categories     ********************/
