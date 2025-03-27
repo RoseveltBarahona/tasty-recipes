@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", iniciarGSAP)
 
-function iniciarGSAP() {    
+function iniciarGSAP() {  
+
     gsap.registerPlugin(ScrollTrigger)
+    
 
     gsap.from([".navbar__logo",".menu__item",], { 
         duration: .4, 
@@ -14,7 +16,6 @@ function iniciarGSAP() {
 
     gsap.from(".tags__item",{
         opacity: 0, 
-        pinSpacing: true, 
         duration: .4,        
         ease: "power2.out",
         scrollTrigger: {
@@ -33,7 +34,7 @@ function iniciarGSAP() {
             trigger: ".recipe-card",
             start: "top 80%", 
             delay: 2,    
-        }, 
+        }
     })
     /* gsap.from(".tags__item",{
         scrollTrigger: {

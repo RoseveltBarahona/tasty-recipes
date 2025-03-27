@@ -1,6 +1,6 @@
 @use "../globals" as *;
 
-.wrap-recipe-detail {
+/* .wrap-recipe-detail {
     filter: saturate(1.05);    width: 100vw;
     height: 100vh;
     position: fixed;
@@ -20,14 +20,38 @@
         visibility: visible;
         opacity: 1;
     }
-}
+} */
+
+.wrap-recipe-detail {
+    filter: saturate(1.1);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: transform 0.3s ease, display 0.3s ease allow-discrete, opacity 0.5s ease;
+    overflow: hidden;
+
+    opacity: 0;
+    //transform: scale(0.9);
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    &[open] {
+        //transform: scale(1);
+        opacity: 1;
+
+        @starting-style {
+            //transform: scale(0.8);
+            opacity: 0;
+        }
+    }
+} 
 
 .recipe-detail {
     padding: .5rem;
     background-color: white;
     border-radius: $space-base * 2;
     position: relative;
-
     width: 100%;
 
     &__content {
@@ -39,6 +63,10 @@
         //flex-wrap: wrap;
         gap: 5%;
         padding: 1rem .5rem 8rem;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__title {

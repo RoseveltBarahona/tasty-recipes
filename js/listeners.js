@@ -1,7 +1,7 @@
 
 import { seleccionarReceta, seleccionarCategoria } from "./api.js"
 import { uiCloseRecipeModal } from "./ui.js"
-import { burgerMenu, containerMenu, menu, selectCategories, btnSearch, mainCategories } from "./selectores.js"
+import { burgerMenu, containerMenu, menu, selectCategories, btnSearch, mainCategories, } from "./selectores.js"
 export { launchDetaillModal }
 
 function launchDetaillModal() {

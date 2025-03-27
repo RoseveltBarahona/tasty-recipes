@@ -134,15 +134,15 @@ function uiMostrarRecetaModal(receta, time) {
     const cerrarBtn = document.createElement("button")
     cerrarBtn.classList.add("btn-secondary", "btn-secondary--small")
     cerrarBtn.textContent = "Cerrar"
-    cerrarBtn.onclick = uiCloseRecipeModal
+    cerrarBtn.onclick =  uiCloseRecipeModal
 
     recipeDetailsFooter.appendChild(favoritoBtn)
     recipeDetailsFooter.appendChild(cerrarBtn)
     recipeContent.appendChild(recipeDetailsFooter)
 
     // mostrar detalle de receta
-    //wrapRecipeDetail.classList.remove("u-hide")
-    wrapRecipeDetail.classList.add("wrap-recipe-detail--show")
+   // wrapRecipeDetail.classList.add("wrap-recipe-detail--show")
+    wrapRecipeDetail.showModal();
 }
 
 function uiCloseRecipeModal() {
@@ -150,8 +150,10 @@ function uiCloseRecipeModal() {
         uiLimpiarHtml(recipeDetails) 
     }, 300);
     
-    wrapRecipeDetail.classList.remove("wrap-recipe-detail--show")
+    //wrapRecipeDetail.classList.remove("wrap-recipe-detail--show")
+    wrapRecipeDetail.close()
 }
+
 
 function uiLimpiarHtml(selector) {
     while (selector.firstChild) {
