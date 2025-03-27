@@ -4,8 +4,10 @@
 .wrap-nav {
     background-color: white;
     padding-block: $space-base * 2.75 ;
-    box-shadow: 0px 4px 4px rgba(24, 26, 23, 0.05);
+    box-shadow: 0px 4px 4px rgba(24, 26, 23, 0.03);
     padding-inline: $space-base * 2;
+    position: relative;
+    z-index: 1;
 
     @include tablet {
         padding-block: $space-base * 3.5 $space-base * 3;

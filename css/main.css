@@ -265,8 +265,10 @@ summary {
 .wrap-nav {
   background-color: white;
   padding-block: 1.375rem;
-  box-shadow: 0px 4px 4px rgba(24, 26, 23, 0.05);
+  box-shadow: 0px 4px 4px rgba(24, 26, 23, 0.03);
   padding-inline: 1rem;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .wrap-nav {
@@ -884,7 +886,7 @@ select:invalid {
     }
 } */
 .wrap-recipe-detail {
-  filter: saturate(1.1);
+  filter: saturate(1.05);
   padding: 0;
   border: none;
   background-color: transparent;

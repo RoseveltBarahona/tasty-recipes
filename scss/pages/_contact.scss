@@ -1,0 +1,20 @@
+@use "../globals" as *;
+@use "../base" as *;
+
+.contact {
+    margin-block: $space-base * 8 0;
+    padding-inline: $space-base * 2;
+    @include desktop {
+        padding-inline: 0;
+    }
+}
+.subtitle {
+    font-weight: 300;
+}
+.contact-info {
+    font-size: 1.5rem;
+
+    @include tablet {
+        font-size: 1.25rem;
+    }
+}
