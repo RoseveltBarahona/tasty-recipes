@@ -26,6 +26,7 @@
     filter: saturate(1.05);
     padding: 0;
     border: none;
+    border-radius: $space-base * 2;
     background-color: transparent;
     transition: transform 0.3s ease, display 0.3s ease allow-discrete, opacity 0.4s ease;
     overflow: hidden;
@@ -50,13 +51,12 @@
 .recipe-detail {
     padding: .5rem;
     background-color: white;
-    border-radius: $space-base * 2;
     position: relative;
     width: 100%;
 
     &__content {
         max-width: 1100px;
-        max-height: 95vh;
+        max-height: 90vh;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
